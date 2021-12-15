@@ -2,18 +2,18 @@
 {% load static %}
 {% block body %}
 
-{% ifequal error "no" %}
+{% if error == "no" %}
      <script>
 	   alert('Your Message has been Send Successfully');
 	   window.location=('{% url 'contact' %}');
      </script>
-{% endifequal %}
+{% endif %}
 
-{% ifequal error "yes" %}
+{% if error == "yes" %}
      <script>
 	    alert('Something went wrong, Try Again');
      </script>
-{% endifequal %}
+{% endif %}
 <br><br><br><br>
 <section class="contact" id="contact">
 <h1 class="heading mt-5">contact us</h1>
